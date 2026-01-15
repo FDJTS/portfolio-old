@@ -1,0 +1,155 @@
+body {
+    background-color: #C0C0C0;
+    background-image: url('https://web.archive.org/web/20091026210406/http://geocities.com/Area51/Hollow/4638/stars.gif');
+    /* Starry background if it loads, else gray */
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+}
+
+a:hover {
+    color: #FF00FF;
+    text-decoration: none;
+    cursor: hand;
+    /* IE specific */
+}
+
+h1 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #000080;
+    text-align: center;
+}
+
+hr {
+    color: #000080;
+}
+
+body {
+    scrollbar-face-color: #DEE3E7;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-3dlight-color: #D1D7DC;
+    scrollbar-darkshadow-color: #98AAB1;
+    scrollbar-shadow-color: #DEE3E7;
+    scrollbar-arrow-color: #006699;
+    scrollbar-track-color: #EFEFEF;
+}
+
+/* Main Layout Structure */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+table.main-layout {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border: 2px outset #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+/* Sidebar Styling */
+td.sidebar {
+    width: 200px;
+    vertical-align: top;
+    background-color: #EEEEEE;
+    border-right: 2px groove #CCCCCC;
+    padding: 10px;
+}
+
+/* Content Area Styling */
+td.content-area {
+    vertical-align: top;
+    padding: 20px;
+}
+
+/* Retro 3D Button */
+.retro-button {
+    background-color: #C0C0C0;
+    border: 2px outset #FFFFFF;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'MS Sans Serif', Geneva, sans-serif;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.retro-button:active {
+    border: 2px inset #FFFFFF;
+    padding-top: 9px;
+    /* Simulate push down */
+    padding-bottom: 7px;
+}
+
+.retro-button:hover {
+    background-color: #D3D3D3;
+    color: #000080;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+
+    table.main-layout,
+    tbody,
+    tr,
+    td {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        height: auto !important;
+        box-sizing: border-box;
+    }
+
+    td.sidebar {
+        width: 100% !important;
+        border-right: none !important;
+        border-bottom: 2px groove #CCCCCC;
+        height: auto;
+    }
+
+    /* Hide some decorative elements if they break flow */
+    br {
+        display: none;
+    }
+
+    /* Re-enable br where needed */
+    p br,
+    .retro-button+br {
+        display: block;
+    }
+}
+
+/* Dynamic Project Grid */
+.retro-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.retro-project-card {
+    border: 2px groove #FFFFFF;
+    background-color: #DDDDDD;
+    padding: 10px;
+    width: 300px;
+    /* Fixed width for card look */
+    flex-grow: 1;
+}
+
+.retro-project-card h3 {
+    margin-top: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #999;
+}
+
+.retro-project-card a {
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 5px;
+}
